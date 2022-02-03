@@ -1,7 +1,54 @@
 <html>
-    <head>
-        <title>
-            
-        </title>
-    </head>
+
+<head>
+    <title>Rock Paper And Scissors</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="text-center mt-5 h1">
+        WELCOME TO ROCK PAPER SCISSORS GAME!
+    </div>
+    <div id="message" class="text-center mt-5 h5"></div>
+    <div class="text-center m-5">
+        <input class="btn btn-dark" id="submit" value="Start Game">
+    </div>
+<div class="playArea">
+    <div class="row text-center">
+        <div class="col-6">
+            <h1>Player</h1>
+            <div id="playerScore m-2">0</div>
+            <div id="playerSelect">
+
+            </div>
+        </div>
+        <div class="col-6">
+            <h1>Computer</h1>
+            <div id="playerScore m-2">0</div>
+            <div id="playerSelect">
+
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="icons">
+        <div class="row text-center w-50 m-auto">
+            <div id="rock" class="col-4">
+                <i class="fas fa-hand-rock"></i>
+            </div>
+            <div id="paper" class="col-4">
+                <i class="fas fa-hand-paper"></i>
+            </div>
+            <div id="scissors" class="col-4">
+                <i class="fas fa-hand-scissors"></i>
+            </div>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+
 </html>

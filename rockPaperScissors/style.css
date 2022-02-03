@@ -1,0 +1,17 @@
+*{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+.icons{
+    margin-top: 4rem;
+}
+.playArea{
+    height: 10rem;
+}
+.fa-hand-rock,.fa-hand-paper,.fa-hand-scissors{
+    font-size: 3rem;
+}
+.icons,.playArea{
+    display: none;
+}
