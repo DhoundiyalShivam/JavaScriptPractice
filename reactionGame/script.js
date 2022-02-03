@@ -6,10 +6,12 @@ const resultArea=document.querySelector("#resultArea")
 
 submit.addEventListener("click",game)
 let score=0;
+let playArea = {};
 
 displayMessage('Click Start to Begin!')
 function game(){
     direction.style.display ='none'
+    submit.style.display="none"
     displayMessage("Starting.....")
     startGame()
 }
@@ -17,40 +19,46 @@ function displayMessage(msg){
     message.innerHTML=`<h2>${msg}</h2>`
 }
 function getRandomColor(){
-
     function color(){
         hex = random(255).toString(16)
-        hex.padStart(2,"0")
-        return hex
+        return hex.padStart(2, "0")
+        
     }
 return "#"+color()+color()+color()
 }
+
 function showCircle(){
     const circleEl = document.createElement("div");
+    circleEl.classList.add("box")
     circleEl.style.backgroundColor=getRandomColor()
     circleEl.time = new Date().getTime();
-    circleEl.style.position="relative"
-    circleEl.style.height="70px"
-    circleEl.style.width="70px"
-    circleEl.style.borderRadius="50%"
     circleEl.style.top=random(getTop())+"px"
     circleEl.style.left=random(getTop())+"px"
     circleEl.addEventListener('click',hit)
     gameArea.append(circleEl)
+    playArea.tempTime = setTimeout(()=>{
+        hit({
+            target:{
+                time:circleEl.time
+            }
+        })
+    },2000)
 }
 function getTop(){
     return gameArea.clientHeight +200
-
 }
 function getLeft(){
     return gameArea.clientWidth +200
 }
 function hit(e){
-    // console.log(e)
     let start=e.target.time
     let end = new Date().getTime()
     let duration = Math.abs(start-end)/1000
-    console.log(duration)
+    if(playArea.tempTime){
+        clearTimeout(playArea.tempTime)
+    }
+  clearTimeout(playArea.timer);
+  displayMessage(`It took you ${duration} seconds to click`);
     if(duration>2){
         gameArea.children[0].remove()
         resultArea.innerHTML=`<h2>Too Slow! <span id="loser"> You Lost!</span>
@@ -60,8 +68,8 @@ function hit(e){
     }
     else{
         gameArea.children[0].remove()
-        setTimeout(showCircle,random(4000))
-        startGame()
+        playArea.timer = setTimeout(showCircle, random(4000));
+        // startGame()
         score++
         if(score===15){
             results.innerHTML = `You reached ${score}! <span id="winner"> You win!</span>
@@ -72,13 +80,14 @@ function hit(e){
             resultArea.innerHTML=`Score: ${score} of 15`;
         }
     }
+    
 }
 function resetGame(){
+    submit.style.display="block"
 
 }
 function startGame(){
-setTimeout(showCircle,random(4000))
-
+playArea.timer= setTimeout(showCircle,random(4000))
 }
 
 function random(number){

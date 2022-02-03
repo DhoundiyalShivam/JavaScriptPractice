@@ -24,4 +24,9 @@ body{
     color:var(--blue);
     cursor: pointer;
 }
-
+.box{
+    height: 70px;
+    width: 70px;
+border-radius: 50%;
+position: relative;
+}
