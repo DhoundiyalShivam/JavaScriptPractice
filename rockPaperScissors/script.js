@@ -6,7 +6,7 @@ const playerScore = document.querySelector("#playerScore")
 const computerScore = document.querySelector("#computerScore")
 const playerSelect = document.querySelector("#playerSelect")
 const computerSelect = document.querySelector("#computerSelect")
-
+const won =document.querySelector(".Won")
 submit.addEventListener("click",startGame)
 let compArr=['rock','paper','scissors']
 let pscore=0;
@@ -29,27 +29,53 @@ computerSelect.innerHTML=`<i class="fas fa-hand-${compSelection}"></i>`
  scores(playerSelection,compSelection)
 }
 function scoreBoard(result){
-if(result==0){
+
+
+if(pscore==5||cscore==5){
+    game=false;
+    resetGame()
+    won.style.display='block'
+    icons.style.display='none'
+}
+
+    if(game){
+    if(result==0){
         displayMessage('DRAW')
         playerSelect.style.color='black'
         computerSelect.style.color='black'
 
 }
 else if(result==1){
+    pscore++
+    playerScore.innerText=pscore
     displayMessage('Player Won this round')
     playerSelect.style.color='green'
     computerSelect.style.color='red'
 
 }
-else{
+else if(result==-1){
+        cscore++
+        computerScore.innerText=cscore
         displayMessage('Computer Won this round')
         playerSelect.style.color='red'
         computerSelect.style.color='green'
 }
-console.log(result)
+}
+console.log('pscore',pscore)
+console.log('cscore',cscore)
 }
 function resetGame(){
-    console.log(5)
+    setTimeout(()=>{
+        // pscore=0;
+        // cscore=0;
+        // displayMessage("Game Started");
+        // playerSelect.innerHTML=''
+        // computerSelect.innerHTML=''
+        // won.style.display='none'
+        // icons.style.display='block'
+        localStorage
+        window.location.reload()
+    },5000)
 }
 function scores(pselect,cselect){
     if(pselect===cselect){

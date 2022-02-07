@@ -16,3 +16,11 @@
 .icons,.playArea{
     display: none;
 }
+input{
+    caret-color: transparent;
+    border: none;
+    outline: none;
+}
+.Won{
+    display: none;
+}
