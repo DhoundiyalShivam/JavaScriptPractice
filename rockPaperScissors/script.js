@@ -28,47 +28,82 @@ playerSelect.innerHTML=`<i class="fas fa-hand-${playerSelection}"></i>`
 computerSelect.innerHTML=`<i class="fas fa-hand-${compSelection}"></i>`
  scores(playerSelection,compSelection)
 }
+function scoreBoard(result){
+if(result==0){
+        displayMessage('DRAW')
+        playerSelect.style.color='black'
+        computerSelect.style.color='black'
+
+}
+else if(result==1){
+    displayMessage('Player Won this round')
+    playerSelect.style.color='green'
+    computerSelect.style.color='red'
+
+}
+else{
+        displayMessage('Computer Won this round')
+        playerSelect.style.color='red'
+        computerSelect.style.color='green'
+}
+console.log(result)
+}
 function resetGame(){
     console.log(5)
 }
 function scores(pselect,cselect){
-    if(pselect==5 || cscore==5){
-        game=false
-        resetGame()
-    }
-  if(game){
     if(pselect===cselect){
-        playerScore.innerText=pscore
-        computerScore.innerText=cscore
-        displayMessage('DRAW')
+        scoreBoard(0)
     }else if(pselect=="rock" && cselect=="scissors"){
-        pscore++
-        playerScore.innerText=pscore
-        displayMessage('Player Won this round')
+        scoreBoard(1)
     }else if(pselect=="rock" && cselect=="paper"){
-        cscore++
-        computerScore.innerText=cscore
-        displayMessage('Computer Won this round')
-
+        scoreBoard(-1)
     }else if(pselect=="paper" && cselect =="scissors"){
-        cscore++
-        computerScore.innerText=cscore
-        displayMessage('Computer Won this round')
+        scoreBoard(-1)
     }else if(pselect=="paper" && cselect =="rock"){
-        pscore++
-        playerScore.innerText=pscore
-        displayMessage('Player Won this round')
-
+        scoreBoard(-1)
     }else if(pselect=="scissors" && cselect=="rock"){
-        cscore++
-        computerScore.innerText=cscore
-        displayMessage('Computer Won this round')
+        scoreBoard(-1)
     }else if(pselect=="scissors" && cselect=="paper"){
-        pscore++
-        displayMessage('Player Won this round')
-        playerScore.innerText=pscore
+        scoreBoard(1)
     }
-  }
+//     if(pselect==5 || cscore==5){
+//         game=false
+//         resetGame()
+//     }
+//   if(game){
+//     if(pselect===cselect){
+//         playerScore.innerText=pscore
+//         computerScore.innerText=cscore
+//         displayMessage('DRAW')
+//     }else if(pselect=="rock" && cselect=="scissors"){
+//         pscore++
+//         playerScore.innerText=pscore
+//         displayMessage('Player Won this round')
+//     }else if(pselect=="rock" && cselect=="paper"){
+//         cscore++
+//         computerScore.innerText=cscore
+//         displayMessage('Computer Won this round')
+
+//     }else if(pselect=="paper" && cselect =="scissors"){
+//         cscore++
+//         computerScore.innerText=cscore
+//         displayMessage('Computer Won this round')
+//     }else if(pselect=="paper" && cselect =="rock"){
+//         pscore++
+//         playerScore.innerText=pscore
+//         displayMessage('Player Won this round')
+
+//     }else if(pselect=="scissors" && cselect=="rock"){
+//         cscore++
+//         computerScore.innerText=cscore
+//         displayMessage('Computer Won this round')
+//     }else if(pselect=="scissors" && cselect=="paper"){
+//         pscore++
+//         displayMessage('Player Won this round')
+//         playerScore.innerText=pscore
+//     }
+//   }
 }
 
 function getCompSelection(){
