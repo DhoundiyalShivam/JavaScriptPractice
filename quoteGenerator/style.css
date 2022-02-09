@@ -1,0 +1,40 @@
+body{
+    background-image: url("bg.jpeg");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    max-width: 900px;
+    text-align: center;
+background-color: rgba(0,0,0,0.6);
+color: #efefef;
+border-radius: 1rem;
+padding: 1rem 2rem;
+}
+#button{
+    background-color: black;
+    color: #efefef;
+    padding: 1rem 2rem;
+    border: none;
+    font-size: 1rem;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+.loader{
+    height: 150px;
+    width: 150px;
+    border: 10px solid #efefef;
+    border-top: 10px solid black;
+    border-radius: 50%;
+    animation: spin 2s linear infinite;
+    display: none;
+}
+@keyframes spin {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(100deg);
+    }
+}
