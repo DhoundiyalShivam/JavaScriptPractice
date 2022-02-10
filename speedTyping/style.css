@@ -17,6 +17,11 @@ body{
     font-family: monospace;
     text-align: justify;
 }
+.Info{
+    font-size: 3rem;
+    text-align: center;
+    color: var(--yellow);
+}
 .container{
     max-width:50%;
     margin: 0 auto;

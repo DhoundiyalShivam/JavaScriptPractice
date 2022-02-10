@@ -3,16 +3,24 @@ const container=document.querySelector(".container")
 const text=document.querySelector(".toBeTyped")
 const textArea = document.querySelector(".typeText")
 const timer=document.querySelector(".timer")
+const Info=document.querySelector(".Info")
+
 const api="https://type.fit/api/quotes"
 let quoteArr=[]
 function showLoader(){
+    timer.style.display="none"
     container.style.display="none"
     loader.style.display="block"
+    Info.style.display="block"
+
 }
 function removeLoader(){
-    
-    container.style.display="block"
     loader.style.display="none"
+    Info.style.display="none"
+    timer.style.display="block"
+    container.style.display="block"
+  
+
 }
 function showQuote(){
     text.innerHTML=""
