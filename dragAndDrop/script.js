@@ -9,15 +9,7 @@ items.forEach((item)=>{
         item.style.display="none"
         },0)
     })
-    item.addEventListener("dragend",function(){
-
-        item.style.display="block"
-
-        setTimeout(()=>{
-
-            draggedItem=null
-        })
-    })
+   
     itemBoxes.forEach((itemBox)=>{
         itemBox.addEventListener("dragover",function(e){
             e.preventDefault()
@@ -27,6 +19,12 @@ items.forEach((item)=>{
         })
         itemBox.addEventListener("drop",function(){
             this.append(draggedItem)
+        })
+    })
+    item.addEventListener("dragend",function(){
+        item.style.display="block"
+        setTimeout(()=>{
+            draggedItem=null
         })
     })
 })
