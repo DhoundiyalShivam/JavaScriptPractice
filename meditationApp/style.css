@@ -3,6 +3,11 @@
     padding: 0;
     box-sizing: border-box;
 }
+video{
+    position: fixed;
+    width: 100%;
+    z-index: -1
+}
 body{
     background-color: antiquewhite;
 }
@@ -25,9 +30,7 @@ body{
 }
 .watch {
     display: flex;
-/* gap:2rem; */
     flex-direction: column;
-
     justify-content: space-evenly;
     align-items: center;
     height: 250px;
