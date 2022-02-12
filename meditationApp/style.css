@@ -1,0 +1,64 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: antiquewhite;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100vh;
+}
+.times{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+.time{
+    background-color: aqua;
+    padding: 1rem;
+    border-radius: 10px;
+}
+.watch {
+    display: flex;
+/* gap:2rem; */
+    flex-direction: column;
+
+    justify-content: space-evenly;
+    align-items: center;
+    height: 250px;
+    width: 250px;
+    border: 10px solid black;
+    border-radius: 50%;
+}
+.timer{
+    font-size: 2rem;
+}
+.watch img{
+    width: 3rem;
+}
+.mode img{
+    width: 5rem;
+}
+.play{
+    display: block;
+}
+.pause{
+    display: none;
+}
+.mode{
+    display: flex;
+    flex-direction: column;
+    gap:6rem
+}
+.rain,.beach{
+    background-color: black;
+    border-radius: 50%;
+}
+.rain img,.beach img{
+    border-radius: 50%;
+}
