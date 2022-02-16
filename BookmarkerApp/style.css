@@ -1,0 +1,37 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --blue:#D0E8F2;
+    --white:#FCF8EC;
+    --green:#79A3B1;
+    --grey:#456268;
+}
+
+body{
+    background-color: var(--blue);
+}
+.inputSection{
+    width: 80%;
+    margin: auto;
+    background-color: var(--white);
+    padding: 1rem 0;
+    border-radius: 5px;
+}
+input{
+    width: 50%;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    outline: none;
+    border: 2px solid var(--green);
+}
+.outputContainer{
+    width: 50%;
+    margin:2rem auto;
+}
+.bookmark{
+    background-color: var(--green);
+    border-radius: 1rem;
+}
