@@ -35,5 +35,14 @@ input{
     background-color: var(--green);
     border-radius: 1rem;
     padding: 0.5rem;
-    margin:1rem 0
+    margin:1rem 0;
+    display:flex;
+}
+a{
+    text-decoration: none;
+}
+h3{
+    color: var(--white);
+     text-transform: capitalize;
+
 }
