@@ -34,4 +34,6 @@ input{
 .bookmark{
     background-color: var(--green);
     border-radius: 1rem;
+    padding: 0.5rem;
+    margin:1rem 0
 }
