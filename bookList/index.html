@@ -1,0 +1,58 @@
+<html>
+
+<head>
+    <title>BookList</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header d-flex justify-content-center align-items-center">
+            <div class="icon ">
+                <img src="open-book.png" alt="book.png">
+            </div>
+            <div class="heading h1 m-3">My<span class="book">Book</span>List</div>
+        </div>
+        <form>
+            <div class="my-3">
+                <lable for="title">Title</lable>
+                <input id="title" type="text" class="form-control" />
+            </div>
+            <div class="my-3">
+                <lable for="author">Author</lable>
+                <input id="author" type="text" class="form-control" />
+            </div>
+            <div class="my-3">
+                <lable for="isbn">ISBN#</lable>
+                <input id="isbn" type="text" class="form-control" />
+            </div>
+            <div class="my-3">
+                <input id="submit" type="button" class="btn btn-primary form-control" value="Submit"/>
+            </div>
+        </form>
+        <table class="table mt-5">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>ISBN</th>
+                    <th></th>
+                </tr>
+            </thead>
+           
+          <tbody class="bookList">
+            <tr>
+                <td>Title</td>
+                <td>Author</td>
+                <td>ISBN</td>
+                <td><img src="remove.png" class="cancelIcon"></td>
+            </tr>
+          </tbody>
+        </table>
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>
