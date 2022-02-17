@@ -51,6 +51,9 @@ body{
 .play{
     display: block;
 }
+img{
+    cursor: pointer;
+}
 .pause{
     display: none;
 }
