@@ -51,8 +51,8 @@ submit.addEventListener('click',()=>{
     else{
         alert('Please Enter the city name')
     }
-let api = `http://api.weatherapi.com/v1/current.json?key=4425302281a941dea5a181626221302&q=${city}&aqi=no`
+let api = `https://api.weatherapi.com/v1/current.json?key=4425302281a941dea5a181626221302&q=${city}&aqi=no`
 
     weatherDetails(api)
 })
-weatherDetails(`http://api.weatherapi.com/v1/current.json?key=4425302281a941dea5a181626221302&q=delhi&aqi=no`)
+weatherDetails(`https://api.weatherapi.com/v1/current.json?key=4425302281a941dea5a181626221302&q=delhi&aqi=no`)
