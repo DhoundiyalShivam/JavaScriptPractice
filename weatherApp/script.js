@@ -22,7 +22,7 @@ let desc=document.querySelector('.desc')
 
 let city
 let celcius=true
-const proxy='https://cors-anywhere.herokuapp.com/'
+// const proxy='https://cors-anywhere.herokuapp.com/'
 async function weatherDetails(api){
    try{
     let response = await fetch(api)
@@ -51,10 +51,10 @@ submit.addEventListener('click',()=>{
     else{
         alert('Please Enter the city name')
     }
-let api = `${proxy}https://api.weatherapi.com/v1/current.json?key=4425302281a941dea5a181626221302&q=${city}&aqi=no`
+let api = `https://api.weatherapi.com/v1/current.json?key=4425302281a941dea5a181626221302&q=${city}&aqi=no`
 
     weatherDetails(api)
 })
-weatherDetails(`${proxy}https://api.weatherapi.com/v1/current.json?key=4425302281a941dea5a181626221302&q=delhi&aqi=no`)
+weatherDetails(`https://api.weatherapi.com/v1/current.json?key=4425302281a941dea5a181626221302&q=delhi&aqi=no`)
 
 // using proxy to avoid the cors error
