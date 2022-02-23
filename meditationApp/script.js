@@ -9,9 +9,15 @@ const timer=document.querySelector(".timer")
 let defaultDuration=120
 time.forEach((singleTime)=>{
 singleTime.addEventListener('click',()=>{
+    play.style.display="block"   
+    pause.style.display="none"
+    video.pause()
+    audio.pause()
+    audio.currentTime=0
+    video.currentTime=0
      defaultDuration=singleTime.dataset.time
-     let sec=Math.floor(currentTime%60).toString().padStart(2,0);
-     let min=Math.floor(currentTime/60).toString().padStart(2,0);
+     let sec=Math.floor(defaultDuration%60).toString().padStart(2,0);
+     let min=Math.floor(defaultDuration/60).toString().padStart(2,0);
     timer.textContent=`${min}:${sec}`
 })
 })
