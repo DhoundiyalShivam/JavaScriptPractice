@@ -1,0 +1,4 @@
+Unit testing:- Testing only one function
+intergration testing:- Testing all the functions together
+
+How testing is done 
